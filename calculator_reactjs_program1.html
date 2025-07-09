@@ -74,14 +74,9 @@
         }
         
         function calculateResult() {
-            try {
-                let result = eval(displayValue);
-                document.getElementById("result").textContent = result;
-                displayValue = "";
-            } catch (e) {
-                document.getElementById("result").textContent = "Error";
-                displayValue = "";
-            }
+            let result = eval(displayValue);
+            document.getElementById("result").textContent = result;
+            displayValue = "";
         }
 
         function clearAll() {
