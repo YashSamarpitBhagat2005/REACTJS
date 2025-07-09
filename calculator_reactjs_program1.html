@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .outer-layer{
+            background:rgb(78, 75, 96);
+            width: 300px;
+            padding: 20px;
+            border-radius: 12px;
+            border: solid black 3px;
+        }
+        button{
+            height:60px;
+            width: 60px;
+            margin: 6px;
+            border: solid black 2px;
+            filter: drop-shadow(0px 3px 0px black);
+        }
+        #result{
+            background: rgb(255, 255, 255);
+            padding: 40px;
+            border: solid black 2px;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <center>
+        <div class="outer-layer">
+            <div class="inner-layer">
+                <h3 id="result"> </h3>
+            </div>
+            <div class="keyboard-pad">
+                <div id="buttons-container-1"> 
+                    <button onclick="appendNumber('1')" id="num1"> 1 </button>
+                    <button onclick="appendNumber('2')" id="num2"> 2 </button>
+                    <button onclick="appendNumber('3')" id="num3"> 3 </button>
+                </div>
+                <div id="buttons-container-1"> 
+                    <button onclick="appendNumber('4')" id="num4"> 4 </button>
+                    <button onclick="appendNumber('5')" id="num5"> 5 </button>
+                    <button onclick="appendNumber('6')" id="num6"> 6 </button>
+                </div>
+                <div id="buttons-container-1"> 
+                    <button onclick="appendNumber('7')" id="num7"> 7 </button>
+                    <button onclick="appendNumber('8')" id="num8"> 8 </button>
+                    <button onclick="appendNumber('9')" id="num9"> 9 </button>
+                    <button onclick="appendNumber('0')" id="num0"> 0 </button>
+                </div>
+                <div id="buttons-container-1"> 
+                    <button onclick="appendNumber('+')" id="num+"> + </button>
+                    <button onclick="appendNumber('-')" id="num-"> - </button>
+                    <button onclick="appendNumber('*')" id="num*"> * </button>
+                    <button onclick="appendNumber('/')" id="num/"> / </button>
+                </div>
+                <div class="buttons-container"> 
+                    <button onclick="calculateResult()" id="equals"> = </button>
+                    <button onclick="clearAll()" id="clear"> Clear </button>
+                </div>
+            </div>
+        </div>
+    </center>
+    <script>
+        let displayValue = "";
+        
+        function appendNumber(val) {
+            displayValue += val;
+            document.getElementById("result").textContent = displayValue;
+        }
+        
+        function calculateResult() {
+            try {
+                let result = eval(displayValue);
+                document.getElementById("result").textContent = result;
+                displayValue = "";
+            } catch (e) {
+                document.getElementById("result").textContent = "Error";
+                displayValue = "";
+            }
+        }
+
+        function clearAll() {
+            displayValue = "";
+            document.getElementById("result").textContent = "";
+        }
+    </script>
+</body>
+</html>
