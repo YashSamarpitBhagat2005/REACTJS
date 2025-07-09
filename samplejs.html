@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <center>
+        <H1> SUM </H1> <h1 id="display-answer-sum"> </h1>
+        <H1> PRODUCT </H1> <h1 id="display-answer-prod"> </h1>
+        <H1> DIFFERENCE </H1> <h1 id="display-answer-diff"> </h1>
+        <H1> DIVISION </H1> <h1 id="display-answer-div"> </h1>
+    </center>
+    <script>
+        let a=40;
+        let b=20;
+
+        let sum=a+b;
+        document.getElementById("display-answer-sum").textContent = sum;
+
+        let product = a*b;
+        document.getElementById("display-answer-prod").textContent = product;
+
+        let difference = a-b
+        document.getElementById("display-answer-diff").textContent = difference;
+
+        let division = a/b
+        document.getElementById("display-answer-div").textContent = division;
+
+    </script>
+</body>
+</html>
