@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> fat arrow function </title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <script>
+        const discountgiven = (cost, quantity) =>{ //cost per quantity and quantity of items
+            totalprice=cost*quantity
+            if(totalprice<5000){
+                console.log(totalprice)
+            }
+            else{
+                totalprice=totalprice-(totalprice * 20/100)
+                console.log(totalprice)
+            }
+        }
+
+        discountgiven(100, 10)
+        discountgiven(5000, 1)
+    </script>
+</body>
+</html>

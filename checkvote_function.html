@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hoisting </title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <script>
+        calc(10,2) // code will render even whe the function is called before declaration dur to Hoisting
+        function calc(a,b){
+            c=a+b
+            console.log(c)
+            d=a*b
+            console.log(d)
+        }
+
+        calc(10,2)
+    </script>
+</body>
+</html>
