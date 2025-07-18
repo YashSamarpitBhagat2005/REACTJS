@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ArrayTask </title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <script>
+        let student = ['Bob', 'Alice', 'Drake', 'Mathew', 'Elysia', 'Kevin', 'Cameron', 'Walter', 'Chasca']
+
+        function knowLength(ar){
+            console.log(`Length of array is ${ar.length}`)
+        }
+
+        function inserting(a){
+            if(student.length<10){
+                student.push(a)
+            }else{
+                console.log("cannot insert...")
+            }
+            console.log(student)
+        }
+        
+        function deleting(){
+            if(student.length==0){
+                console.log("Array is Empty")
+            }else{
+                student.pop()
+            }
+            console.log(student)
+        }
+        function sortIt(a){
+            a.sort((n1,n2 )=>n1.localeCompare(n2))
+            console.log(a)
+        }
+
+        function searchFor(ar, val){
+            if(ar.includes(val)){
+                console.log(`Yes.. ${val} is present`)
+                console.log("It is Present at", ar.indexOf(val))
+            }else{
+                console.log("Notfound")
+            }
+        }
+
+        knowLength(student)
+        inserting("Waldo")
+        knowLength(student)
+
+        
+
+    </script>
+</body>
+</html>
