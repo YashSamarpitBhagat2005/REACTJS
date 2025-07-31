@@ -1,0 +1,22 @@
+body{
+    font-family: Verdana;
+}
+
+#formlayout{
+    color: black;
+    display: inline;
+}
+.formbody{
+    background: rgb(211, 217, 220);
+    padding: 10px;
+    border: solid 2px black;
+    border-radius: 4px;
+}
+
+#submitbtn, #clearbtn{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(86, 86, 221);
+    color: white;
+    border-radius: 10px;
+}

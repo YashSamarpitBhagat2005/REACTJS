@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration Form </title>
+    <link rel="stylesheet" href="formreg.css">
+    
+</head>
+<body>
+    <center><h1> REGISTRATION FORM </h1> </center>
+    <div id="formlayout">
+        <form class="formbody">
+            <center><h2> STUDENT DETAILS </h2> </center>
+            <label> NAME </label> &nbsp <input class="namecolumn" id="namebox" type="text"> <br><br>
+            <label> EMAIL </label> &nbsp <input class="namecolumn" type="email" id="emailbox"> <br><br>
+            <label> PASSWORD </label> &nbsp <input class="namecolumn" type="password" id="passwordbox"> <br><br>
+            <label> DATE OF BIRTH </label> &nbsp <input class="namecolumn" type="date" id="datebox"> <br><br>
+            <label> AGE </label> &nbsp <input class="namecolumn" type="number" id="agebox"> <br><br>
+
+            <label> GENDER </label> 
+            <input class="namecolumn" type="radio" name="gender" value="male"> MALE 
+            <input class="namecolumn" type="radio" name="gender" value="female"> FEMALE
+            <input class="namecolumn" type="radio" name="gender" value="female"> NOT TO DISCLOSE 
+            <br> <br>
+
+            <label> PHONE NUMBER </label> &nbsp; <input id="namecolumn" type="text" id="numberbox"> <br> <br>
+        </form>
+        <br>
+        <form class="formbody">
+            <center> <h2> SUBJECTS </h2> </center>
+            <div>
+                <h4> COMPULSORY </h4>
+                <input class="namecolumn" type="checkbox" name="subjects" value="business communication"> BUSINESS COMMUNICATION 
+                <input class="namecolumn" type="checkbox" name="subjects" value="operating system"> OPERATING SYSTEM 
+
+            </div>
+
+            <div>
+                <h4> ANY ONE OF YOUR INTREST </h4>
+                <input class="namecolumn" type="checkbox" name="subjects" value="C"> C
+                <input class="namecolumn" type="checkbox" name="subjects" value="Java"> JAVA
+                <input class="namecolumn" type="checkbox" name="subjects" value="Python"> Python <br> <br>
+                <input class="namecolumn" type="checkbox" name="subjects" value="C++"> C++
+                <input class="namecolumn" type="checkbox" name="subjects" value="Web Designing"> Web Designing
+                <input class="namecolumn" type="checkbox" name="subjects" value="R"> R
+
+            </div>
+        </form>
+        <br>
+        <br>
+        <center>
+        <button id="submitbtn" type="submit"> SUBMIT </button>
+        <button id="clearbtn"> CLEAR </button>
+        </center>
+        <br>
+        <br>
+    </div>
+    <script src="formreg.js"></script>
+</body>
+</html>
