@@ -6,6 +6,7 @@ document.getElementById("submitbtn").addEventListener('click', function(event){
     console.log(name);
     let email = document.getElementById("emailbox").value;
     console.log(email);
+
     let dob = document.getElementById("datebox").value;
     console.log(dob);
     
@@ -39,5 +40,32 @@ document.getElementById("submitbtn").addEventListener('click', function(event){
     console.log(`subjects: ${subjectList}`);
 });
 
+document.getElementById('emailbox').addEventListener('input', function() {
+let emailVal = this.value;
+let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/g;
+let msgSpan = document.getElementById('emailmsg');
+
+if (emailPattern.test(emailVal)) {
+    msgSpan.textContent = "Verified";
+    msgSpan.style.color = "green";
+} else {
+    msgSpan.textContent = "Invalid";
+    msgSpan.style.color = "red";
+}
+});
+
+document.getElementById('passwordbox').addEventListener('input', function() {
+let passdVal = this.value;
+let passdPattern = /[a-zA-Z0-9]{8,}$/g;
+let passdSpan = document.getElementById('passdmsg');
+
+if (passdPattern.test(passdVal)) {
+    passdSpan.textContent = "Valid";
+    passdSpan.style.color = "green";
+} else {
+    passdSpan.textContent = "Invalid";
+    passdSpan.style.color = "red";
+}
+});
 
 
